@@ -64,7 +64,7 @@ var translations = {
     "rooms.apt3.name": "Three-Bedroom Apartment",
     "rooms.apt3.beds": "3 bedrooms",
     "rooms.apt3.guests": "Up to 8 guests",
-    "rooms.apt3.desc": "Our largest accommodation — a spacious apartment with three bedrooms, fully equipped kitchen, living and dining room with ocean views, and generous patio. Ideal for families or groups. PLEASE contact us directly to book this apartment!",
+    "rooms.apt3.desc": "Our largest accommodation — a spacious apartment with three bedrooms, fully equipped kitchen, living and dining room with ocean views, and generous patio. Ideal for families or groups.",
     "rooms.apt3.f1": "3 bedrooms",
     "rooms.apt3.f2": "Equipped kitchen",
     "rooms.apt3.f3": "Living &amp; dining room",
@@ -207,7 +207,7 @@ var translations = {
     "rooms.apt3.name": "Apartamento T3",
     "rooms.apt3.beds": "3 quartos",
     "rooms.apt3.guests": "Até 8 hóspedes",
-    "rooms.apt3.desc": "O nosso maior alojamento — apartamento espaçoso com três quartos, cozinha totalmente equipada, sala de estar e jantar com vista mar e pátio generoso. Ideal para famílias ou grupos. Por favor, entre em contato conosco diretamente para reservar este apartamento.",
+    "rooms.apt3.desc": "O nosso maior alojamento — apartamento espaçoso com três quartos, cozinha totalmente equipada, sala de estar e jantar com vista mar e pátio generoso. Ideal para famílias ou grupos.",
     "rooms.apt3.f1": "3 quartos",
     "rooms.apt3.f2": "Cozinha equipada",
     "rooms.apt3.f3": "Sala de estar e jantar",
@@ -350,7 +350,7 @@ var translations = {
     "rooms.apt3.name": "Apartamento de 3 Habitaciones",
     "rooms.apt3.beds": "3 habitaciones",
     "rooms.apt3.guests": "Hasta 8 huéspedes",
-    "rooms.apt3.desc": "Nuestro alojamiento más grande — apartamento espacioso con tres habitaciones, cocina totalmente equipada, sala de estar y comedor con vistas al mar y generoso patio. Ideal para familias o grupos. Póngase en contacto con nosotros directamente para reservar este apartamento.",
+    "rooms.apt3.desc": "Nuestro alojamiento más grande — apartamento espacioso con tres habitaciones, cocina totalmente equipada, sala de estar y comedor con vistas al mar y generoso patio. Ideal para familias o grupos.",
     "rooms.apt3.f1": "3 habitaciones",
     "rooms.apt3.f2": "Cocina equipada",
     "rooms.apt3.f3": "Sala de estar y comedor",
@@ -493,7 +493,7 @@ var translations = {
     "rooms.apt3.name": "三居室公寓",
     "rooms.apt3.beds": "3间卧室",
     "rooms.apt3.guests": "最多8位客人",
-    "rooms.apt3.desc": "我们最大的住宿选择 — 宽敞的公寓，设有三间卧室、设备齐全的厨房、可欣赏海景的客厅餐厅及宽阔庭院。非常适合家庭或团体出行。请直接联系我们预订此公寓！",
+    "rooms.apt3.desc": "我们最大的住宿选择 — 宽敞的公寓，设有三间卧室、设备齐全的厨房、可欣赏海景的客厅餐厅及宽阔庭院。非常适合家庭或团体出行。",
     "rooms.apt3.f1": "3间卧室",
     "rooms.apt3.f2": "全套厨房设备",
     "rooms.apt3.f3": "客厅与餐厅",
@@ -598,12 +598,16 @@ function applyLanguage(lang) {
     if (t[key2] !== undefined) phEls[j].placeholder = t[key2];
   }
 
-  // Update booking links with language
-  var langMap = { en: 'en', pt: 'pt', es: 'es', zh: 'zh' };
-  var bookLinks = document.querySelectorAll('.booking-link');
-  for (var k = 0; k < bookLinks.length; k++) {
-    bookLinks[k].href = 'https://www.reseliva.com/booknow/silverside/?lang=' + (langMap[lang] || 'en');
-  }
+  // Keep Exely booking engine language in sync
+  try {
+    if (window.bookingengine && window.bookingengine.integration) {
+      window.bookingengine.integration.push([
+        'setContext',
+        'BE-INT-silverside_2026-08-05',
+        lang
+      ]);
+    }
+  } catch (e) {}
 
   document.body.className = document.body.className.replace(/lang-\w+/, '') + ' lang-' + lang;
   try { localStorage.setItem('silverside-lang', lang); } catch(e) {}

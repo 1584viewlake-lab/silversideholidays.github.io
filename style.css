@@ -206,7 +206,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .hero-content {
   position: relative; z-index: 2;
-  padding: calc(var(--nav-h) + 60px) 0 80px;
+  padding: calc(var(--nav-h) + 60px) 0 160px;
   max-width: 740px;
 }
 .hero-eyebrow {
@@ -240,6 +240,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .hero-scroll {
   position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
   z-index: 2;
+  display: none;
 }
 .hero-scroll span {
   display: block; width: 2px; height: 48px;
@@ -251,6 +252,64 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .hero-wave {
   position: absolute; bottom: -1px; left: 0; right: 0; z-index: 2;
   width: 100%;
+}
+
+/* ── Exely search form ── */
+.hero-booking {
+  position: absolute;
+  left: 0; right: 0;
+  bottom: 56px;
+  z-index: 3;
+  padding: 0 24px;
+  pointer-events: none;
+}
+.hero-booking #block-search {
+  pointer-events: auto;
+}
+#block-search,
+#block-search * {
+  box-sizing: border-box;
+}
+#block-search {
+  margin: 0 auto;
+  max-width: 1154px;
+  background: #0d1a2e;
+  border-radius: 35px;
+}
+#block-search .be-container {
+  padding: 0 30px;
+}
+#block-search .be-container > a[href*="exely.com"] {
+  display: none;
+}
+@media screen and (min-width: 1154px) and (min-height: 600px) {
+  #block-search {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(59.2px);
+  }
+  #block-search.block-search--main-v1 {
+    margin: 0;
+    max-width: 362px;
+  }
+  #block-search.block-search--main-v2 {
+    border-radius: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-booking {
+    position: relative;
+    bottom: auto;
+    margin: -24px 0 0;
+    padding: 0 16px;
+  }
+  #hero {
+    min-height: auto;
+  }
+  .hero-content {
+    padding-bottom: 40px;
+  }
+  .hero-scroll { display: none; }
 }
 
 /* ══════════════════════

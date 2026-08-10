@@ -9,6 +9,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <!-- Exely Booking Engine -->
+  <meta name="google-site-verification" content="CUYx3LEW8jjVTD2BBXpYp2aMDFgSX5VWZkhQwWPMs1c" />
+  <script type="text/javascript">
+    (function () {
+      var lang = 'en';
+      try {
+        var stored = localStorage.getItem('silverside-lang');
+        if (stored && ['en', 'pt', 'es', 'zh'].indexOf(stored) !== -1) lang = stored;
+      } catch (e) {}
+      !function(e,n){
+        var t="bookingengine",o="integration",i=e[t]=e[t]||{},a=i[o]=i[o]||{},r="__cq",c="__loader",d="getElementsByTagName";
+        if(n=n||[],a[r]=a[r]?a[r].concat(n):n,!a[c]){a[c]=!0;var l=e.document,g=l[d]("head")[0]||l[d]("body")[0];
+        !function n(i){if(0!==i.length){var a=l.createElement("script");a.type="text/javascript",a.async=!0,a.src="https://"+i[0]+"/integration/loader.js",
+        a.onerror=a.onload=function(n,i){return function(){e[t]&&e[t][o]&&e[t][o].loaded||(g.removeChild(n),i())}}(a,(function(){n(i.slice(1,i.length))})),g.appendChild(a)}}(
+        ["pt-ibe.hopenapi.com", "ibe.hopenapi.com", "ibe.behopenapi.com"])}
+      }(window, [
+        ["setContext", "BE-INT-silverside_2026-08-05", lang],
+        ["embed", "search-form", { container: "be-search-form" }]
+      ]);
+    })();
+  </script>
 </head>
 <body class="lang-en">
 
@@ -43,7 +64,7 @@
           </div>
         </li>
         <li>
-          <a href="https://www.reseliva.com/booknow/silverside/?lang=en" target="_blank" rel="noopener"
+          <a href="#" data-be-booking-open="true"
              class="btn btn-nav booking-link" data-i18n="nav.book">Book Now</a>
         </li>
       </ul>
@@ -63,9 +84,16 @@
       <h1 class="hero-title" data-i18n="hero.title">Where the Atlantic<br>Meets Comfort</h1>
       <p class="hero-sub" data-i18n="hero.sub">70 km north of Lisbon — panoramic ocean views, private terraces and authentic Portuguese hospitality.</p>
       <div class="hero-actions">
-        <a href="https://www.reseliva.com/booknow/silverside/?lang=en" target="_blank" rel="noopener"
+        <a href="#" data-be-booking-open="true"
            class="btn btn-primary booking-link" data-i18n="hero.cta">Reserve Your Stay</a>
         <a href="#about" class="btn btn-ghost" data-i18n="hero.discover">Discover More</a>
+      </div>
+    </div>
+    <div class="hero-booking">
+      <div id="block-search" class="block-search block-search--main-v2">
+        <div id="be-search-form" class="be-container">
+          <a href="https://exely.com/" rel="nofollow" target="_blank">Hotel management software</a>
+        </div>
       </div>
     </div>
     <div class="hero-scroll"><span></span></div>
@@ -191,7 +219,7 @@
             <h3 data-i18n="rooms.suite1.name">Sea View Suite — King / Twin</h3>
             <p class="room-size" data-i18n="rooms.suite1.size">30 m² · King or Twin configuration</p>
             <p data-i18n="rooms.suite1.desc">Our most versatile suite, configurable as one king bed or two twin beds. Features a private patio, ocean views and elegant Portuguese décor. Rooms S1–S5.</p>
-            <a href="https://www.reseliva.com/booknow/silverside/?lang=en" target="_blank" rel="noopener"
+            <a href="#" data-be-booking-open="true" data-be-room="5077211"
                class="btn btn-primary booking-link" data-i18n="rooms.book">Book this suite</a>
           </div>
         </article>
@@ -222,7 +250,7 @@
             <h3 data-i18n="rooms.suite2.name">Sea View Suite — Queen (Sides)</h3>
             <p class="room-size" data-i18n="rooms.suite2.size">30 m² · Queen bed</p>
             <p data-i18n="rooms.suite2.desc">Bright and airy front/pool-side suite with a queen bed, private patio, and sweeping views. Perfect for couples. Rooms S2 &amp; S4.</p>
-            <a href="https://www.reseliva.com/booknow/silverside/?lang=en" target="_blank" rel="noopener"
+            <a href="#" data-be-booking-open="true" data-be-room="5077212"
                class="btn btn-outline booking-link" data-i18n="rooms.book">Book this suite</a>
           </div>
         </article>
@@ -250,7 +278,7 @@
             <h3 data-i18n="rooms.suite3.name">Garden View Suite — Queen (Center)</h3>
             <p class="room-size" data-i18n="rooms.suite3.size">30 m² · Queen bed</p>
             <p data-i18n="rooms.suite3.desc">A charming central suite with queen bed, seating area and a private patio opening to the garden. Warm, tranquil atmosphere with beautiful natural light.</p>
-            <a href="https://www.reseliva.com/booknow/silverside/?lang=en" target="_blank" rel="noopener"
+            <a href="#" data-be-booking-open="true" data-be-room="5077213"
                class="btn btn-outline booking-link" data-i18n="rooms.book">Book this suite</a>
           </div>
         </article>
@@ -320,7 +348,7 @@
                 <span data-i18n="rooms.apt2.f4">Private terrace</span>
               </div>
             </div>
-            <a href="https://www.reseliva.com/booknow/silverside/?lang=en" target="_blank" rel="noopener"
+            <a href="#" data-be-booking-open="true" data-be-room="5077214"
                class="btn btn-outline booking-link" data-i18n="rooms.bookapt">Book apartment</a>
           </div>
         </article>
@@ -360,7 +388,7 @@
               <span class="room-pill" data-i18n="rooms.kitchen">Full kitchen</span>
               <span class="room-pill" data-i18n="rooms.mezzanine">Pool view</span>
             </p>
-            <p data-i18n="rooms.apt3.desc">Our largest accommodation — a spacious apartment with three bedrooms, fully equipped kitchen, living and dining room with ocean views, and generous patio. Ideal for families or groups. PLEASE contact us directly to book this apartment!</p>
+            <p data-i18n="rooms.apt3.desc">Our largest accommodation — a spacious apartment with three bedrooms, fully equipped kitchen, living and dining room with ocean views, and generous patio. Ideal for families or groups.</p>
             <div class="room-features">
               <div class="room-feature">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
@@ -379,7 +407,7 @@
                 <span data-i18n="rooms.apt3.f4">Ideal for families</span>
               </div>
             </div>
-            <a href="https://www.reseliva.com/booknow/silverside/?lang=en" target="_blank" rel="noopener"
+            <a href="#" data-be-booking-open="true" data-be-room="5077215"
                class="btn btn-primary booking-link" data-i18n="rooms.bookapt">Book apartment</a>
           </div>
         </article>
@@ -444,7 +472,7 @@
             <span data-i18n="bkf.li4">Served every morning in the breakfast room</span>
           </li>
         </ul>
-        <a href="https://www.reseliva.com/booknow/silverside/?lang=en" target="_blank" rel="noopener"
+        <a href="#" data-be-booking-open="true"
            class="btn btn-primary booking-link" data-i18n="hero.cta">Reserve Your Stay</a>
       </div>
     </div>
@@ -1299,7 +1327,7 @@
           </li>
         </ul>
         <div class="contact-book-cta">
-          <a href="https://www.reseliva.com/booknow/silverside/?lang=en" target="_blank" rel="noopener"
+          <a href="#" data-be-booking-open="true"
              class="btn btn-primary booking-link" data-i18n="contact.bookbtn">Book Online Now</a>
         </div>
         <div class="contact-badge">
@@ -1404,7 +1432,7 @@
         <p><a href="mailto:info@silverside.pt">info@silverside.pt</a></p>
         <p><a href="tel:+351932119557">+351 932 119 557 (<span data-i18n="contact.mobile.note">Call to national mobile network</span>)</a></p>
         <p><a href="https://maps.google.com/?q=Rua+Arrinhada+11,+Serra+do+Bouro,+Caldas+da+Rainha,+Portugal" target="_blank" rel="noopener">Rua Arrinhada 11, Boavista<br>2500-716 Serra do Bouro<br>Caldas da Rainha, Portugal</a></p>
-        <a href="https://www.reseliva.com/booknow/silverside/?lang=en" target="_blank" rel="noopener"
+        <a href="#" data-be-booking-open="true"
            class="btn btn-nav footer-book booking-link" data-i18n="nav.book">Book Now</a>
       </div>
     </div>
