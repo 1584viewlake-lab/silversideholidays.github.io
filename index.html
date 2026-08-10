@@ -9,26 +9,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <!-- Exely Booking Engine -->
+  <!-- Exely booking engine -->
   <meta name="google-site-verification" content="CUYx3LEW8jjVTD2BBXpYp2aMDFgSX5VWZkhQwWPMs1c" />
   <script type="text/javascript">
-    (function () {
-      var lang = 'en';
-      try {
-        var stored = localStorage.getItem('silverside-lang');
-        if (stored && ['en', 'pt', 'es', 'zh'].indexOf(stored) !== -1) lang = stored;
-      } catch (e) {}
-      !function(e,n){
-        var t="bookingengine",o="integration",i=e[t]=e[t]||{},a=i[o]=i[o]||{},r="__cq",c="__loader",d="getElementsByTagName";
-        if(n=n||[],a[r]=a[r]?a[r].concat(n):n,!a[c]){a[c]=!0;var l=e.document,g=l[d]("head")[0]||l[d]("body")[0];
-        !function n(i){if(0!==i.length){var a=l.createElement("script");a.type="text/javascript",a.async=!0,a.src="https://"+i[0]+"/integration/loader.js",
-        a.onerror=a.onload=function(n,i){return function(){e[t]&&e[t][o]&&e[t][o].loaded||(g.removeChild(n),i())}}(a,(function(){n(i.slice(1,i.length))})),g.appendChild(a)}}(
-        ["pt-ibe.hopenapi.com", "ibe.hopenapi.com", "ibe.behopenapi.com"])}
-      }(window, [
-        ["setContext", "BE-INT-silverside_2026-08-05", lang],
-        ["embed", "search-form", { container: "be-search-form" }]
-      ]);
-    })();
+    !function(e,n){
+      var lang=(localStorage.getItem('siteLang')||'en');
+      var t="bookingengine",o="integration",i=e[t]=e[t]||{},a=i[o]=i[o]||{},r="__cq",c="__loader",d="getElementsByTagName";
+      if(n=n||[],a[r]=a[r]?a[r].concat(n):n,!a[c]){a[c]=!0;var l=e.document,g=l[d]("head")[0]||l[d]("body")[0];
+      !function n(i){if(0!==i.length){var a=l.createElement("script");a.type="text/javascript",a.async=!0,a.src="https://"+i[0]+"/integration/loader.js",
+      a.onerror=a.onload=function(n,i){return function(){e[t]&&e[t][o]&&e[t][o].loaded||(g.removeChild(n),i())}}(a,(function(){n(i.slice(1,i.length))})),g.appendChild(a)}}(
+      ["pt-ibe.hopenapi.com","ibe.hopenapi.com","ibe.behopenapi.com"])}
+    }(window,[
+      ["setContext","BE-INT-silverside_2026-08-05",(localStorage.getItem('siteLang')||'en')],
+      ["embed","search-form",{container:"be-search-form"}]
+    ]);
   </script>
 </head>
 <body class="lang-en">
@@ -87,13 +81,6 @@
         <a href="#" data-be-booking-open="true"
            class="btn btn-primary booking-link" data-i18n="hero.cta">Reserve Your Stay</a>
         <a href="#about" class="btn btn-ghost" data-i18n="hero.discover">Discover More</a>
-      </div>
-    </div>
-    <div class="hero-booking">
-      <div id="block-search" class="block-search block-search--main-v2">
-        <div id="be-search-form" class="be-container">
-          <a href="https://exely.com/" rel="nofollow" target="_blank">Hotel management software</a>
-        </div>
       </div>
     </div>
     <div class="hero-scroll"><span></span></div>
@@ -388,7 +375,7 @@
               <span class="room-pill" data-i18n="rooms.kitchen">Full kitchen</span>
               <span class="room-pill" data-i18n="rooms.mezzanine">Pool view</span>
             </p>
-            <p data-i18n="rooms.apt3.desc">Our largest accommodation — a spacious apartment with three bedrooms, fully equipped kitchen, living and dining room with ocean views, and generous patio. Ideal for families or groups.</p>
+            <p data-i18n="rooms.apt3.desc">Our largest accommodation — a spacious apartment with three bedrooms, fully equipped kitchen, living and dining room with ocean views, and generous patio. Ideal for families or groups. PLEASE contact us directly to book this apartment!</p>
             <div class="room-features">
               <div class="room-feature">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
@@ -418,8 +405,8 @@
 
   <!-- ══ PROPERTY STRIP ══ -->
   <div class="property-strip">
-    <img src="Silverside Holiday Back with Pool 2.jpg"
-         alt="Silverside Holidays with pool at dusk" loading="lazy" />
+    <img src="Silverside Holiday Back with Pool 1.jpg"
+         alt="Silverside Holidays with pool" loading="lazy" />
     <div class="property-strip-overlay">
       <p data-i18n="strip.quote">"Your best option to enjoy a relaxing holiday in Portugal"</p>
     </div>
@@ -746,12 +733,6 @@
           <div class="gallery-item-caption"><span>Breakfast seating</span></div>
         </div>
 
-        <!-- Pool 2 -->
-        <div class="gallery-item gallery-item--wide" data-category="pool"
-             data-lb-src="Silverside Holiday Back with Pool 2.jpg" data-lb-caption="Pool &amp; garden">
-          <img src="Silverside Holiday Back with Pool 2.jpg" alt="Pool and garden" loading="lazy" />
-          <div class="gallery-item-caption"><span>Pool &amp; garden</span></div>
-        </div>
 
         <!-- T3 pool view -->
         <div class="gallery-item" data-category="pool"
